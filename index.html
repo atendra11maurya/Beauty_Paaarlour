@@ -9,6 +9,9 @@
     <!-- Favicon with S Monogram -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     
+    <!-- Preload Hero Image for instant LCP performance -->
+    <link rel="preload" as="image" href="/images/hero-bride.webp" type="image/webp" fetchpriority="high" />
+    
     <!-- Google Fonts: Cormorant Garamond (Editorial Serif) & Outfit (Modern Sans) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -92,13 +95,13 @@
           </div>
         </div>
         
-        <div class="hero-image reveal-image">
+        <div class="hero-image">
           <div class="image-overlay"></div>
           <div class="hero-image-badge">
             <span class="badge-label">Shagun Standard</span>
             <span class="badge-sub">Personalized Makeup & Styling</span>
           </div>
-          <img src="/images/hero-bride.jpg" alt="Indian Bridal Makeup by Shagun Makeup Studio" />
+          <img src="/images/hero-bride.webp" alt="Indian Bridal Makeup by Shagun Makeup Studio" fetchpriority="high" decoding="async" width="1200" height="1600" />
         </div>
       </section>
 
@@ -145,7 +148,7 @@
             <div class="service-image-wrap">
               <span class="service-num">01</span>
               <div class="service-image">
-                <img src="/images/service-bridal.jpg" alt="Indian Bridal Makeup & Pre-Bridal Care" />
+                <img src="/images/service-bridal.webp" alt="Indian Bridal Makeup & Pre-Bridal Care" loading="lazy" decoding="async" width="800" height="600" />
               </div>
             </div>
             <div class="service-content">
@@ -170,7 +173,7 @@
             <div class="service-image-wrap">
               <span class="service-num">02</span>
               <div class="service-image">
-                <img src="/images/service-party-makeup.jpg" alt="Party & Regular Occasion Makeup" />
+                <img src="/images/service-party-makeup.webp" alt="Party & Regular Occasion Makeup" loading="lazy" decoding="async" width="800" height="600" />
               </div>
             </div>
             <div class="service-content">
@@ -195,7 +198,7 @@
             <div class="service-image-wrap">
               <span class="service-num">03</span>
               <div class="service-image">
-                <img src="/images/service-hair-styling.jpg" alt="Indian Bridal Hair Styling with Jasmine Flowers" />
+                <img src="/images/service-hair-styling.webp" alt="Indian Bridal Hair Styling with Jasmine Flowers" loading="lazy" decoding="async" width="800" height="600" />
               </div>
             </div>
             <div class="service-content">
@@ -220,7 +223,7 @@
             <div class="service-image-wrap">
               <span class="service-num">04</span>
               <div class="service-image">
-                <img src="/images/service-skin-nails.jpg" alt="Facial Skin Care and Relaxation" />
+                <img src="/images/service-skin-nails.webp" alt="Facial Skin Care and Relaxation" loading="lazy" decoding="async" width="800" height="600" />
               </div>
             </div>
             <div class="service-content">
@@ -314,11 +317,11 @@
           <div class="bridal-images">
             <div class="bridal-img-1 reveal-image">
               <div class="bridal-frame-accent"></div>
-              <img src="/images/shagun-bride-flagship.jpg" alt="Traditional Indian Bridal Makeup by Shagun" />
+              <img src="/images/shagun-bride-flagship.webp" alt="Traditional Indian Bridal Makeup by Shagun" loading="lazy" decoding="async" width="800" height="1066" />
               <div class="image-caption-tag">Bridal Portrait &bull; Traditional & Modern Style</div>
             </div>
             <div class="bridal-img-2 reveal-image delay-1">
-              <img src="/images/bridal-details-jewellery.jpg" alt="Indian Bridal Mehendi and Jewellery Details" />
+              <img src="/images/bridal-details-jewellery.webp" alt="Indian Bridal Mehendi and Jewellery Details" loading="lazy" decoding="async" width="600" height="450" />
               <div class="image-caption-tag">Jewellery & Mehndi Details</div>
             </div>
           </div>
@@ -337,7 +340,7 @@
 
         <div class="portfolio-grid">
           <div class="portfolio-item tall reveal-image">
-            <img src="/images/gallery-bride.jpg" alt="Indian Bride with Soft Glam Makeup" />
+            <img src="/images/gallery-bride.webp" alt="Indian Bride with Soft Glam Makeup" loading="lazy" decoding="async" width="800" height="1066" />
             <div class="portfolio-overlay">
               <div class="overlay-content">
                 <span class="overlay-category">Bridal Makeup</span>
@@ -347,7 +350,7 @@
           </div>
           
           <div class="portfolio-item wide reveal-image delay-1">
-            <img src="/images/gallery-hair-waves.jpg" alt="Indian Occasion Hair Styling & Waves" />
+            <img src="/images/gallery-hair-waves.webp" alt="Indian Occasion Hair Styling & Waves" loading="lazy" decoding="async" width="1000" height="562" />
             <div class="portfolio-overlay">
               <div class="overlay-content">
                 <span class="overlay-category">Hair Styling</span>
@@ -357,7 +360,7 @@
           </div>
           
           <div class="portfolio-item reveal-image delay-2">
-            <img src="/images/gallery-nail-mehndi.jpg" alt="Manicured Nails and Bridal Mehndi" />
+            <img src="/images/gallery-nail-mehndi.webp" alt="Manicured Nails and Bridal Mehndi" loading="lazy" decoding="async" width="800" height="600" />
             <div class="portfolio-overlay">
               <div class="overlay-content">
                 <span class="overlay-category">Nail Care</span>
@@ -367,7 +370,7 @@
           </div>
           
           <div class="portfolio-item reveal-image">
-            <img src="/images/gallery-wedding-bride.jpg" alt="Joyful Indian Bride on Wedding Day" />
+            <img src="/images/gallery-wedding-bride.webp" alt="Joyful Indian Bride on Wedding Day" loading="lazy" decoding="async" width="800" height="600" />
             <div class="portfolio-overlay">
               <div class="overlay-content">
                 <span class="overlay-category">Wedding Day</span>
@@ -434,7 +437,7 @@
 
           <div class="experience-visual fade-up delay-1">
             <div class="studio-image-frame reveal-image">
-              <img src="/images/studio-interior.jpg" alt="Shagun Makeup Studio Space" />
+              <img src="/images/studio-interior.webp" alt="Shagun Makeup Studio Space" loading="lazy" decoding="async" width="1400" height="788" />
               <div class="studio-badge">
                 <span class="studio-badge-title">The Studio Space</span>
                 <span class="studio-badge-sub">Clean, comfortable & relaxing</span>

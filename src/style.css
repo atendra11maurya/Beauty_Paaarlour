@@ -434,6 +434,8 @@ p {
 }
 
 .hero-content {
+  position: relative;
+  left: -1in;
   padding: calc(var(--spacing-xl) + 2rem) 0 var(--spacing-xl);
   width: 52%;
   padding-right: 3.5rem;
@@ -1539,8 +1541,8 @@ p {
    ========================================================================== */
 .fade-up {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(18px);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .fade-up.visible {
@@ -1548,23 +1550,22 @@ p {
   transform: translateY(0);
 }
 
-.delay-1 { transition-delay: 0.12s; }
-.delay-2 { transition-delay: 0.24s; }
-.delay-3 { transition-delay: 0.36s; }
+.delay-1 { transition-delay: 0.05s; }
+.delay-2 { transition-delay: 0.1s; }
+.delay-3 { transition-delay: 0.15s; }
 
 .reveal-image {
   overflow: hidden;
 }
 
 .reveal-image img {
-  transform: scale(1.06);
-  opacity: 0;
-  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.9s ease;
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal-image.visible img {
   transform: scale(1);
-  opacity: 1;
 }
 
 /* ==========================================================================
@@ -1583,6 +1584,7 @@ p {
   }
 
   .hero-content {
+    left: 0;
     width: 100%;
     padding-right: 0;
     padding-top: 2rem;
