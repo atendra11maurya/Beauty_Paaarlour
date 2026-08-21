@@ -349,6 +349,8 @@ p {
 
 /* Architectural Brand Wordmark */
 .brand-wordmark {
+  position: relative;
+  left: -1in;
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -468,7 +470,7 @@ p {
 
 .hero-content {
   position: relative;
-  left: 0;
+  left: -1in;
   padding: calc(var(--spacing-xl) + 2rem) 0 var(--spacing-xl);
   width: 52%;
   padding-right: 3.5rem;
@@ -2172,6 +2174,10 @@ p {
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 75px;
+  }
+
+  .brand-wordmark {
+    left: 0;
   }
 
   .hero-content {
