@@ -1,83 +1,107 @@
 /**
- * Main JavaScript for Shagun Beauty Parlour
- * Handles navigation, mobile menu, and scroll reveal animations
+ * SHAGUN — Beauty & Bridal Makeup Studio
+ * Interactive behaviors: Navigation, Mobile Drawer, Smooth Anchor Scrolling & Scroll Reveal Animations
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Mobile Menu Toggle
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-  
-    if (mobileMenuToggle && navLinks) {
-      mobileMenuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        // Simple animation for hamburger
-        const spans = mobileMenuToggle.querySelectorAll('span');
-        if (navLinks.classList.contains('active')) {
-            spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-            spans[1].style.opacity = '0';
-            spans[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
-        } else {
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
+  // 1. Mobile Menu Toggle & Auto-Close on Link Click
+  const mobileMenuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const navItems = document.querySelectorAll('.nav-links a');
+
+  if (mobileMenuToggle && navLinks) {
+    const spans = mobileMenuToggle.querySelectorAll('span');
+
+    const toggleMenu = (open) => {
+      const shouldOpen = open !== undefined ? open : !navLinks.classList.contains('active');
+      if (shouldOpen) {
+        navLinks.classList.add('active');
+        if (spans.length >= 3) {
+          spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+          spans[1].style.opacity = '0';
+          spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+        }
+      } else {
+        navLinks.classList.remove('active');
+        if (spans.length >= 3) {
+          spans[0].style.transform = 'none';
+          spans[1].style.opacity = '1';
+          spans[2].style.transform = 'none';
+        }
+      }
+    };
+
+    mobileMenuToggle.addEventListener('click', () => toggleMenu());
+
+    // Auto-close when clicking any nav link
+    navItems.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          toggleMenu(false);
         }
       });
-    }
-  
-    // 2. Navbar Scroll Effect
-    const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
     });
+  }
+
+  // 2. Navbar Scrolled Background Effect
+  const navbar = document.getElementById('navbar');
+  const handleScroll = () => {
+    if (!navbar) return;
+    if (window.scrollY > 40) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  };
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll(); // Initial check
+
+  // 3. Scroll Reveal Animations (Intersection Observer)
+  const revealElements = document.querySelectorAll('.fade-up, .reveal-image, .reveal-card');
   
-    // 3. Scroll Reveal Animations (Intersection Observer)
-    const fadeUpElements = document.querySelectorAll('.fade-up, .reveal-image');
-    
-    const revealOptions = {
-      threshold: 0.15, // Trigger when 15% of the element is visible
-      rootMargin: "0px 0px -50px 0px" // Trigger slightly before it hits the bottom
-    };
-  
+  if ('IntersectionObserver' in window) {
     const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-          return;
-        } else {
+        if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Stop observing once revealed
+          observer.unobserve(entry.target);
         }
       });
-    }, revealOptions);
-  
-    fadeUpElements.forEach(element => {
-      revealObserver.observe(element);
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
     });
-  
-    // 4. Set Current Year in Footer
-    const yearSpan = document.getElementById('year');
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-    }
-    
-    // 5. Parallax effect for Final CTA background (subtle)
-    const ctaSection = document.querySelector('.final-cta');
-    if (ctaSection) {
-      window.addEventListener('scroll', () => {
-        const scrolled = window.scrollY;
-        const rect = ctaSection.getBoundingClientRect();
-        
-        // Only animate if section is in viewport
-        if(rect.top < window.innerHeight && rect.bottom > 0) {
-            // Adjust background position slightly based on scroll
-            // Background is fixed via CSS, so we don't strictly need JS parallax, 
-            // but this is a placeholder if we want to change from background-attachment: fixed
-            // which can be buggy on some mobile browsers.
-        }
-      });
-    }
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  } else {
+    // Fallback for older browsers
+    revealElements.forEach(el => el.classList.add('visible'));
+  }
+
+  // 4. Set Current Year in Footer
+  const yearSpan = document.getElementById('year');
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+
+  // 5. Smooth Scroll with Header Offset for Anchor Links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        e.preventDefault();
+        const headerOffset = 80;
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
   });
+});
