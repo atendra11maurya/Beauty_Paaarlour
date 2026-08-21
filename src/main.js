@@ -104,4 +104,85 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // 6. Call Drop-up Menu Trigger & Click-Outside Handling
+  const callDropupContainers = document.querySelectorAll('.call-dropup-container');
+
+  callDropupContainers.forEach(container => {
+    const triggerBtn = container.querySelector('.call-trigger-btn');
+    if (!triggerBtn) return;
+
+    triggerBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isActive = container.classList.contains('active');
+      
+      // Close any other open drop-ups
+      callDropupContainers.forEach(c => {
+        c.classList.remove('active');
+        const btn = c.querySelector('.call-trigger-btn');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isActive) {
+        container.classList.add('active');
+        triggerBtn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // Global click outside to close drop-up
+  document.addEventListener('click', (e) => {
+    callDropupContainers.forEach(container => {
+      if (!container.contains(e.target)) {
+        container.classList.remove('active');
+        const btn = container.querySelector('.call-trigger-btn');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  // Escape key to close drop-up
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      callDropupContainers.forEach(container => {
+        container.classList.remove('active');
+        const btn = container.querySelector('.call-trigger-btn');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  // 7. Copy Address to Clipboard Functionality
+  const copyAddressBtn = document.getElementById('copy-address-btn');
+  if (copyAddressBtn) {
+    copyAddressBtn.addEventListener('click', async () => {
+      const address = copyAddressBtn.getAttribute('data-address') || 'Shagun Makeup Studio, Zheel Market, Bhagat Singh Chowk, Dharuhera, Haryana';
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(address);
+        } else {
+          const textarea = document.createElement('textarea');
+          textarea.value = address;
+          textarea.style.position = 'fixed';
+          textarea.style.opacity = '0';
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textarea);
+        }
+
+        const btnText = copyAddressBtn.querySelector('.copy-btn-text');
+        const originalText = btnText ? btnText.textContent : 'Copy Address';
+        copyAddressBtn.classList.add('copied');
+        if (btnText) btnText.textContent = '✓ Copied to Clipboard!';
+
+        setTimeout(() => {
+          copyAddressBtn.classList.remove('copied');
+          if (btnText) btnText.textContent = originalText;
+        }, 2500);
+      } catch (err) {
+        console.error('Failed to copy address: ', err);
+      }
+    });
+  }
 });
