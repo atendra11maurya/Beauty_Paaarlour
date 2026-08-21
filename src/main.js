@@ -105,10 +105,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 6. Call Drop-up Menu Trigger & Click-Outside Handling
-  const callDropupContainers = document.querySelectorAll('.call-dropup-container');
+  // 6. Call Dropdown / Drop-up Menu Trigger & Click-Outside Handling
+  const callContainers = document.querySelectorAll('.call-dropdown-container, .call-dropup-container');
 
-  callDropupContainers.forEach(container => {
+  callContainers.forEach(container => {
     const triggerBtn = container.querySelector('.call-trigger-btn');
     if (!triggerBtn) return;
 
@@ -116,8 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
       e.stopPropagation();
       const isActive = container.classList.contains('active');
       
-      // Close any other open drop-ups
-      callDropupContainers.forEach(c => {
+      // Close any other open drop-downs
+      callContainers.forEach(c => {
         c.classList.remove('active');
         const btn = c.querySelector('.call-trigger-btn');
         if (btn) btn.setAttribute('aria-expanded', 'false');
@@ -130,9 +130,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Global click outside to close drop-up
+  // Global click outside to close drop-downs
   document.addEventListener('click', (e) => {
-    callDropupContainers.forEach(container => {
+    callContainers.forEach(container => {
       if (!container.contains(e.target)) {
         container.classList.remove('active');
         const btn = container.querySelector('.call-trigger-btn');
@@ -141,10 +141,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Escape key to close drop-up
+  // Escape key to close drop-downs
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      callDropupContainers.forEach(container => {
+      callContainers.forEach(container => {
         container.classList.remove('active');
         const btn = container.querySelector('.call-trigger-btn');
         if (btn) btn.setAttribute('aria-expanded', 'false');

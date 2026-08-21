@@ -39,10 +39,59 @@
         </div>
         
         <div class="nav-actions">
-          <a href="https://wa.me/919671550024" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-            <span>Book Appointment</span>
-          </a>
-          <a href="https://wa.me/919671550024" class="btn btn-secondary mobile-only" target="_blank" rel="noopener noreferrer">Enquire</a>
+          <!-- Book Appointment All-in-One Call & WhatsApp Dropdown -->
+          <div class="call-dropdown-container">
+            <button type="button" class="btn btn-primary call-trigger-btn" aria-haspopup="true" aria-expanded="false" aria-label="Book appointment options">
+              <svg class="phone-svg-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>Book Appointment</span>
+              <span class="dropdown-arrow">&#9660;</span>
+            </button>
+
+            <div class="call-dropdown-menu dropdown-down" role="menu">
+              <div class="dropdown-title">Call or WhatsApp to Book</div>
+              
+              <a href="tel:+919671550024" class="dropup-link" role="menuitem">
+                <div class="dropup-icon-wrap">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div class="dropup-info">
+                  <span class="phone-number">+91 96715 50024</span>
+                  <span class="phone-label">Primary Studio Call</span>
+                </div>
+                <span class="call-badge">Call</span>
+              </a>
+
+              <a href="tel:+917015471467" class="dropup-link" role="menuitem">
+                <div class="dropup-icon-wrap">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div class="dropup-info">
+                  <span class="phone-number">+91 70154 71467</span>
+                  <span class="phone-label">Alternate Studio Line</span>
+                </div>
+                <span class="call-badge">Call</span>
+              </a>
+
+              <a href="https://wa.me/919671550024?text=Hi%20Shagun%20Makeup%20Studio,%20I%20would%20like%20to%20book%20an%20appointment" class="dropup-link wa-link" target="_blank" rel="noopener noreferrer" role="menuitem">
+                <div class="dropup-icon-wrap wa-icon-wrap">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.079-1.84-.424-.984-.41-1.636-1.39-1.685-1.455-.049-.065-.399-.53-.399-1.011 0-.48.252-.716.342-.814.09-.098.197-.123.262-.123.066 0 .131.001.189.004.06.002.14-.023.219.166.079.189.27 0.658.295.707.025.049.041.107.008.172-.033.066-.049.107-.098.164-.049.057-.103.128-.148.172-.049.049-.1.103-.043.201.057.098.254.419.546.679.376.335.693.438.791.487.098.049.156.041.213-.025.057-.066.246-.287.312-.386.066-.098.131-.082.221-.049.09.033.574.271.672.32.098.049.164.074.189.115.025.041.025.238-.119.643z"/>
+                  </svg>
+                </div>
+                <div class="dropup-info">
+                  <span class="phone-number">WhatsApp Chat</span>
+                  <span class="phone-label">Direct WhatsApp Enquiry</span>
+                </div>
+                <span class="call-badge wa-badge">Chat &rarr;</span>
+              </a>
+            </div>
+          </div>
         </div>
         
         <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" id="menu-toggle">
@@ -85,12 +134,76 @@
             </div>
             
             <div class="hero-actions fade-up delay-3">
-              <a href="https://wa.me/919671550024" class="btn btn-brand btn-large" target="_blank" rel="noopener noreferrer">
-                <span>Book an Appointment</span>
-                <span class="btn-arrow">&rarr;</span>
-              </a>
+              <!-- Book an Appointment All-in-One Call & WhatsApp Dropdown -->
+              <div class="call-dropdown-container">
+                <button type="button" class="btn btn-brand btn-large call-trigger-btn" aria-haspopup="true" aria-expanded="false">
+                  <svg class="phone-svg-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                  <span>Book an Appointment</span>
+                  <span class="dropdown-arrow">&#9660;</span>
+                </button>
+
+                <div class="call-dropdown-menu dropdown-down" role="menu">
+                  <div class="dropdown-title">Call or WhatsApp to Book</div>
+                  
+                  <a href="tel:+919671550024" class="dropup-link" role="menuitem">
+                    <div class="dropup-icon-wrap">
+                      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                      </svg>
+                    </div>
+                    <div class="dropup-info">
+                      <span class="phone-number">+91 96715 50024</span>
+                      <span class="phone-label">Primary Studio Call</span>
+                    </div>
+                    <span class="call-badge">Call</span>
+                  </a>
+
+                  <a href="tel:+917015471467" class="dropup-link" role="menuitem">
+                    <div class="dropup-icon-wrap">
+                      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                      </svg>
+                    </div>
+                    <div class="dropup-info">
+                      <span class="phone-number">+91 70154 71467</span>
+                      <span class="phone-label">Alternate Studio Line</span>
+                    </div>
+                    <span class="call-badge">Call</span>
+                  </a>
+
+                  <a href="https://wa.me/919671550024?text=Hi%20Shagun%20Makeup%20Studio,%20I%20would%20like%20to%20enquire%20about%20your%20services" class="dropup-link wa-link" target="_blank" rel="noopener noreferrer" role="menuitem">
+                    <div class="dropup-icon-wrap wa-icon-wrap">
+                      <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+                        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.079-1.84-.424-.984-.41-1.636-1.39-1.685-1.455-.049-.065-.399-.53-.399-1.011 0-.48.252-.716.342-.814.09-.098.197-.123.262-.123.066 0 .131.001.189.004.06.002.14-.023.219.166.079.189.27 0.658.295.707.025.049.041.107.008.172-.033.066-.049.107-.098.164-.049.057-.103.128-.148.172-.049.049-.1.103-.043.201.057.098.254.419.546.679.376.335.693.438.791.487.098.049.156.041.213-.025.057-.066.246-.287.312-.386.066-.098.131-.082.221-.049.09.033.574.271.672.32.098.049.164.074.189.115.025.041.025.238-.119.643z"/>
+                      </svg>
+                    </div>
+                    <div class="dropup-info">
+                      <span class="phone-number">WhatsApp Chat</span>
+                      <span class="phone-label">Direct WhatsApp Enquiry</span>
+                    </div>
+                    <span class="call-badge wa-badge">Chat &rarr;</span>
+                  </a>
+                </div>
+              </div>
+
               <a href="#services" class="btn btn-secondary btn-large">
                 <span>Explore Services</span>
+              </a>
+            </div>
+
+            <!-- Studio Visit Direct Address Badge -->
+            <div class="hero-subtle-visit fade-up delay-4">
+              <a href="#location" class="hero-visit-link" aria-label="Visit studio in Dharuhera">
+                <span class="pin-wrap">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </span>
+                <span>Visit Studio &bull; Zheel Market, Bhagat Singh Chowk, Dharuhera</span>
+                <span class="subtle-arrow">&rarr;</span>
               </a>
             </div>
           </div>
@@ -307,10 +420,60 @@
             </div>
 
             <div class="bridal-action-wrap">
-              <a href="https://wa.me/919671550024?text=Hi%20Shagun%20Makeup%20Studio,%20I%20would%20like%20to%20book%20a%20Bridal%20Consultation" class="btn btn-brand btn-large" target="_blank" rel="noopener noreferrer">
-                <span>Book a Bridal Consultation</span>
-                <span class="btn-arrow">&rarr;</span>
-              </a>
+              <!-- Book Bridal Consultation All-in-One Call & WhatsApp Dropdown -->
+              <div class="call-dropdown-container">
+                <button type="button" class="btn btn-brand btn-large call-trigger-btn" aria-haspopup="true" aria-expanded="false">
+                  <svg class="phone-svg-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                  <span>Book a Bridal Consultation</span>
+                  <span class="dropdown-arrow">&#9660;</span>
+                </button>
+
+                <div class="call-dropdown-menu dropdown-down" role="menu">
+                  <div class="dropdown-title">Call or WhatsApp for Bridal</div>
+                  
+                  <a href="tel:+919671550024" class="dropup-link" role="menuitem">
+                    <div class="dropup-icon-wrap">
+                      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                      </svg>
+                    </div>
+                    <div class="dropup-info">
+                      <span class="phone-number">+91 96715 50024</span>
+                      <span class="phone-label">Primary Bridal Line</span>
+                    </div>
+                    <span class="call-badge">Call</span>
+                  </a>
+
+                  <a href="tel:+917015471467" class="dropup-link" role="menuitem">
+                    <div class="dropup-icon-wrap">
+                      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                      </svg>
+                    </div>
+                    <div class="dropup-info">
+                      <span class="phone-number">+91 70154 71467</span>
+                      <span class="phone-label">Alternate Bridal Line</span>
+                    </div>
+                    <span class="call-badge">Call</span>
+                  </a>
+
+                  <a href="https://wa.me/919671550024?text=Hi%20Shagun%20Makeup%20Studio,%20I%20would%20like%20to%20book%20a%20Bridal%20Consultation" class="dropup-link wa-link" target="_blank" rel="noopener noreferrer" role="menuitem">
+                    <div class="dropup-icon-wrap wa-icon-wrap">
+                      <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+                        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.079-1.84-.424-.984-.41-1.636-1.39-1.685-1.455-.049-.065-.399-.53-.399-1.011 0-.48.252-.716.342-.814.09-.098.197-.123.262-.123.066 0 .131.001.189.004.06.002.14-.023.219.166.079.189.27 0.658.295.707.025.049.041.107.008.172-.033.066-.049.107-.098.164-.049.057-.103.128-.148.172-.049.049-.1.103-.043.201.057.098.254.419.546.679.376.335.693.438.791.487.098.049.156.041.213-.025.057-.066.246-.287.312-.386.066-.098.131-.082.221-.049.09.033.574.271.672.32.098.049.164.074.189.115.025.041.025.238-.119.643z"/>
+                      </svg>
+                    </div>
+                    <div class="dropup-info">
+                      <span class="phone-number">WhatsApp Chat</span>
+                      <span class="phone-label">Bridal Consultation Chat</span>
+                    </div>
+                    <span class="call-badge wa-badge">Chat &rarr;</span>
+                  </a>
+                </div>
+              </div>
+
               <span class="bridal-slots-note">Advance bridal bookings recommended</span>
             </div>
           </div>
@@ -603,40 +766,35 @@
           <h2>Ready for your special day?</h2>
           <p>Whether you need bridal makeup, party styling, or a refreshing beauty treatment, get in touch with our team today.</p>
           <div class="cta-actions">
-            <a href="https://wa.me/919671550024?text=Hi%20Shagun%20Makeup%20Studio,%20I%20would%20like%20to%20book%20an%20appointment" class="btn btn-brand btn-large" target="_blank" rel="noopener noreferrer">
-              <span>Book on WhatsApp</span>
-              <span class="btn-arrow">&rarr;</span>
-            </a>
-            
-            <!-- Drop-up Call Option Component -->
-            <div class="call-dropup-container">
-              <button type="button" class="btn btn-outline btn-outline-light btn-large call-trigger-btn" id="call-dropup-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Call studio phone numbers">
+            <!-- Book Appointment All-in-One Call & WhatsApp Dropdown -->
+            <div class="call-dropdown-container">
+              <button type="button" class="btn btn-brand btn-large call-trigger-btn" id="call-dropup-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Book an appointment options">
                 <svg class="phone-svg-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                 </svg>
-                <span>Call the Studio</span>
+                <span>Book an Appointment</span>
                 <span class="dropup-arrow">&#9650;</span>
               </button>
 
-              <div class="call-dropup-menu" id="call-dropup-menu" role="menu" aria-labelledby="call-dropup-trigger">
-                <div class="dropup-title">Select Number to Call</div>
+              <div class="call-dropdown-menu dropdown-up" role="menu" aria-labelledby="call-dropup-trigger">
+                <div class="dropdown-title">Call or WhatsApp to Book</div>
                 
                 <a href="tel:+919671550024" class="dropup-link" role="menuitem">
                   <div class="dropup-icon-wrap">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                     </svg>
                   </div>
                   <div class="dropup-info">
                     <span class="phone-number">+91 96715 50024</span>
-                    <span class="phone-label">Primary Number &bull; WhatsApp</span>
+                    <span class="phone-label">Primary Studio Call</span>
                   </div>
                   <span class="call-badge">Call</span>
                 </a>
 
                 <a href="tel:+917015471467" class="dropup-link" role="menuitem">
                   <div class="dropup-icon-wrap">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                     </svg>
                   </div>
@@ -646,8 +804,30 @@
                   </div>
                   <span class="call-badge">Call</span>
                 </a>
+
+                <a href="https://wa.me/919671550024?text=Hi%20Shagun%20Makeup%20Studio,%20I%20would%20like%20to%20book%20an%20appointment" class="dropup-link wa-link" target="_blank" rel="noopener noreferrer" role="menuitem">
+                  <div class="dropup-icon-wrap wa-icon-wrap">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+                      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.079-1.84-.424-.984-.41-1.636-1.39-1.685-1.455-.049-.065-.399-.53-.399-1.011 0-.48.252-.716.342-.814.09-.098.197-.123.262-.123.066 0 .131.001.189.004.06.002.14-.023.219.166.079.189.27 0.658.295.707.025.049.041.107.008.172-.033.066-.049.107-.098.164-.049.057-.103.128-.148.172-.049.049-.1.103-.043.201.057.098.254.419.546.679.376.335.693.438.791.487.098.049.156.041.213-.025.057-.066.246-.287.312-.386.066-.098.131-.082.221-.049.09.033.574.271.672.32.098.049.164.074.189.115.025.041.025.238-.119.643z"/>
+                    </svg>
+                  </div>
+                  <div class="dropup-info">
+                    <span class="phone-number">WhatsApp Chat</span>
+                    <span class="phone-label">Instant Chat & Photos</span>
+                  </div>
+                  <span class="call-badge wa-badge">Chat &rarr;</span>
+                </a>
               </div>
             </div>
+
+            <!-- Visit Studio Address Button -->
+            <a href="#location" class="btn btn-outline btn-outline-light btn-large">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Visit Studio</span>
+            </a>
           </div>
           <span class="cta-subnote">Advance booking recommended for bridal and weekend appointments</span>
         </div>
