@@ -1,9 +1,9 @@
 /* ==========================================================================
-   SHAGUN BEAUTY & BRIDAL MAKEUP STUDIO — Design System & Stylesheet
+   ROSE GOLD BEAUTY & BRIDAL MAKEUP STUDIO — Design System & Stylesheet
    Disciplined Luxury Brand System (Option 1: Warm Ivory & Charcoal with Rose Accents):
    1. Warm Ivory (Primary Canvas):      #FAF7F2 (Luxury Neutral / Clean Breathing Space)
    2. Soft Linen (Secondary Surface):    #F3EDE6 (Quiet Architectural Secondary Ground)
-   3. Shagun Rose (Brand Accent):       #C87885 (Buttons, Tag Highlights, Hover Moments)
+   3. Rose Gold Rose (Brand Accent):       #C87885 (Buttons, Tag Highlights, Hover Moments)
    4. Deep Rose (Text & High Contrast): #7B3545 (Eyebrows, Active Indicators, Key Accents)
    5. Antique Champagne (Jewellery Gold): #B79B6C (Fine Linework, Stars, Borders)
    6. Ink Charcoal (Dark Flagship):     #181514 (Authority Dark Sections / Editorial Contrast)
@@ -20,8 +20,8 @@
   --clr-white: #FFFFFF;
 
   /* Brand Accents */
-  --clr-shagun-rose: #C87885;
-  --clr-shagun-rose-rgb: 200, 120, 133;
+  --clr-rose-gold-rose: #C87885;
+  --clr-rose-gold-rose-rgb: 200, 120, 133;
 
   --clr-deep-rose: #7B3545;
   --clr-deep-rose-rgb: 123, 53, 69;
@@ -99,7 +99,7 @@ ul {
 
 /* Luxury Selection Highlight */
 ::selection {
-  background-color: var(--clr-shagun-rose);
+  background-color: var(--clr-rose-gold-rose);
   color: var(--clr-warm-ivory);
 }
 
@@ -215,18 +215,18 @@ p {
 }
 
 .btn-primary:hover {
-  background-color: var(--clr-shagun-rose);
-  border-color: var(--clr-shagun-rose);
+  background-color: var(--clr-rose-gold-rose);
+  border-color: var(--clr-rose-gold-rose);
   color: var(--clr-warm-ivory);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(200, 120, 133, 0.28);
 }
 
-/* Brand Signature CTA: Shagun Rose */
+/* Brand Signature CTA: Rose Gold Rose */
 .btn-brand {
-  background-color: var(--clr-shagun-rose);
+  background-color: var(--clr-rose-gold-rose);
   color: var(--clr-warm-ivory);
-  border-color: var(--clr-shagun-rose);
+  border-color: var(--clr-rose-gold-rose);
 }
 
 .btn-brand:hover {
@@ -259,8 +259,8 @@ p {
 }
 
 .btn-outline:hover {
-  background-color: var(--clr-shagun-rose);
-  border-color: var(--clr-shagun-rose);
+  background-color: var(--clr-rose-gold-rose);
+  border-color: var(--clr-rose-gold-rose);
   color: var(--clr-warm-ivory);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(200, 120, 133, 0.22);
@@ -378,7 +378,7 @@ p {
 }
 
 .brand-wordmark:hover .wordmark-title {
-  color: var(--clr-shagun-rose);
+  color: var(--clr-rose-gold-rose);
 }
 
 .nav-links {
@@ -404,7 +404,7 @@ p {
   left: 0;
   width: 0;
   height: 1.5px;
-  background-color: var(--clr-shagun-rose);
+  background-color: var(--clr-rose-gold-rose);
   transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -493,17 +493,8 @@ p {
 }
 
 .hero-text-block {
-  border-left: 1.5px solid rgba(183, 155, 108, 0.45);
-  padding-left: 1.5rem;
   margin-bottom: var(--spacing-lg);
-}
-
-.hero-text-block p {
-  font-size: 1.08rem;
-  line-height: 1.68;
-  max-width: 480px;
-  color: var(--clr-text-secondary);
-  margin-bottom: 1.2rem;
+  padding: 0.5rem 0;
 }
 
 .hero-signature-tags {
@@ -511,17 +502,34 @@ p {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.6rem;
-  font-family: var(--font-modern);
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--clr-deep-rose);
-  font-weight: 600;
+  margin-bottom: 1.2rem;
 }
 
-.tag-dot {
-  color: var(--clr-champagne-gold);
-  opacity: 0.8;
+.pill-tag {
+  font-family: var(--font-modern);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--clr-deep-rose);
+  font-weight: 600;
+  background: transparent;
+  padding: 0.4rem 0.85rem;
+  border-radius: 4px;
+  border: 1px solid rgba(200, 120, 133, 0.35);
+  transition: all 0.3s ease;
+}
+
+.pill-tag:hover {
+  background: rgba(200, 120, 133, 0.05);
+  border-color: rgba(200, 120, 133, 0.8);
+}
+
+.hero-text-block p {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  max-width: 480px;
+  color: var(--clr-text-secondary);
+  margin-bottom: 0;
 }
 
 .hero-actions {
@@ -584,14 +592,14 @@ p {
 
 .hero-visit-link:hover {
   background-color: #FFFFFF;
-  border-color: var(--clr-shagun-rose);
+  border-color: var(--clr-rose-gold-rose);
   color: var(--clr-charcoal);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(200, 120, 133, 0.2);
 }
 
 .hero-visit-link:hover .pin-wrap {
-  background-color: var(--clr-shagun-rose);
+  background-color: var(--clr-rose-gold-rose);
   color: #FFFFFF;
 }
 
@@ -629,16 +637,14 @@ p {
   pointer-events: none;
 }
 
-.hero-image-badge {
-  position: absolute;
-  bottom: 2.5rem;
-  left: 2rem;
-  z-index: 2;
-  background-color: rgba(250, 247, 242, 0.94);
-  backdrop-filter: blur(8px);
-  padding: 0.8rem 1.4rem;
-  border-left: 2.5px solid var(--clr-shagun-rose);
-  box-shadow: 0 10px 30px rgba(24, 21, 20, 0.08);
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.parallax-float {
+  animation: float 6s ease-in-out infinite;
 }
 
 .badge-label {
@@ -747,7 +753,7 @@ p {
 
 .service-card:hover {
   transform: translateY(-4px);
-  border-color: var(--clr-shagun-rose);
+  border-color: var(--clr-rose-gold-rose);
   box-shadow: 0 16px 36px rgba(24, 21, 20, 0.08);
 }
 
@@ -857,7 +863,7 @@ p {
 }
 
 .service-action-link .arrow {
-  color: var(--clr-shagun-rose);
+  color: var(--clr-rose-gold-rose);
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -916,7 +922,7 @@ p {
 }
 
 /* ==========================================================================
-   Flagship Experience: The Shagun Bride (Dark Bridal Studio Section)
+   Flagship Experience: The Rose Gold Bride (Dark Bridal Studio Section)
    ========================================================================== */
 .bridal-feature {
   padding: var(--spacing-xl) var(--container-padding);
@@ -1173,7 +1179,7 @@ p {
 }
 
 /* ==========================================================================
-   The Shagun Experience & Studio (Soft Linen Ground)
+   The Rose Gold Experience & Studio (Soft Linen Ground)
    ========================================================================== */
 .experience-section {
   padding: var(--spacing-xl) var(--container-padding);
@@ -1212,7 +1218,7 @@ p {
 .experience-card {
   background-color: var(--clr-white);
   padding: 1.8rem;
-  border-left: 2.5px solid var(--clr-shagun-rose);
+  border-left: 2.5px solid var(--clr-rose-gold-rose);
   box-shadow: 0 6px 20px rgba(24, 21, 20, 0.04);
   transition: transform 0.3s ease;
 }
@@ -1354,7 +1360,7 @@ p {
 
 .review-card:hover {
   transform: translateY(-4px);
-  border-color: var(--clr-shagun-rose);
+  border-color: var(--clr-rose-gold-rose);
   box-shadow: 0 12px 30px rgba(24, 21, 20, 0.06);
 }
 
@@ -1465,7 +1471,7 @@ p {
   align-items: flex-start;
   padding: 1.5rem;
   background-color: var(--clr-soft-linen);
-  border-left: 3px solid var(--clr-shagun-rose);
+  border-left: 3px solid var(--clr-rose-gold-rose);
   margin-bottom: 1.8rem;
 }
 
@@ -1598,8 +1604,8 @@ p {
 }
 
 .map-floating-badge:hover {
-  background-color: var(--clr-shagun-rose);
-  border-color: var(--clr-shagun-rose);
+  background-color: var(--clr-rose-gold-rose);
+  border-color: var(--clr-rose-gold-rose);
   color: var(--clr-warm-ivory);
   transform: translateY(-2px);
 }
@@ -1614,7 +1620,7 @@ p {
 }
 
 .footer-address-link:hover {
-  color: var(--clr-shagun-rose);
+  color: var(--clr-rose-gold-rose);
 }
 
 .loc-pin-svg {
@@ -1861,8 +1867,8 @@ p {
 }
 
 .dropup-link:hover .dropup-icon-wrap {
-  background-color: var(--clr-shagun-rose);
-  border-color: var(--clr-shagun-rose);
+  background-color: var(--clr-rose-gold-rose);
+  border-color: var(--clr-rose-gold-rose);
   color: var(--clr-warm-ivory);
 }
 
@@ -1910,9 +1916,9 @@ p {
 }
 
 .dropup-link:hover .call-badge {
-  background-color: var(--clr-shagun-rose);
+  background-color: var(--clr-rose-gold-rose);
   color: #FFFFFF;
-  border-color: var(--clr-shagun-rose);
+  border-color: var(--clr-rose-gold-rose);
 }
 
 /* WhatsApp Item inside Dropdown - Luxury Muted Green & Warm Gold */
@@ -2060,7 +2066,7 @@ p {
 }
 
 .footer-nav-list a:hover {
-  color: var(--clr-shagun-rose);
+  color: var(--clr-rose-gold-rose);
 }
 
 .contact-line {
@@ -2070,7 +2076,7 @@ p {
 }
 
 .footer-wa-link {
-  color: var(--clr-shagun-rose);
+  color: var(--clr-rose-gold-rose);
   font-weight: 500;
 }
 
@@ -2128,7 +2134,7 @@ p {
 }
 
 .footer-bottom-links a:hover {
-  color: var(--clr-shagun-rose);
+  color: var(--clr-rose-gold-rose);
 }
 
 .footer-bottom-links .sep {
@@ -2305,7 +2311,7 @@ p {
     background-color: var(--clr-warm-ivory);
     padding: 2.5rem 1.5rem;
     box-shadow: 0 14px 30px rgba(24, 21, 20, 0.1);
-    border-bottom: 2px solid var(--clr-shagun-rose);
+    border-bottom: 2px solid var(--clr-rose-gold-rose);
     align-items: center;
     gap: 1.4rem;
   }

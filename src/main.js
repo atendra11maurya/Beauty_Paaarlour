@@ -1,5 +1,5 @@
 /**
- * SHAGUN — Beauty & Bridal Makeup Studio
+ * ROSE GOLD — Beauty & Bridal Makeup Studio
  * Interactive behaviors: Navigation, Mobile Drawer, Smooth Anchor Scrolling & Scroll Reveal Animations
  */
 
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const copyAddressBtn = document.getElementById('copy-address-btn');
   if (copyAddressBtn) {
     copyAddressBtn.addEventListener('click', async () => {
-      const address = copyAddressBtn.getAttribute('data-address') || 'Shagun Makeup Studio, Zheel Market, Bhagat Singh Chowk, Dharuhera, Haryana';
+      const address = copyAddressBtn.getAttribute('data-address') || 'Rose Gold Beauty Parlour, Near Gurudwara New Colony Bada Park Deoria, 274001';
       try {
         if (navigator.clipboard && navigator.clipboard.writeText) {
           await navigator.clipboard.writeText(address);
